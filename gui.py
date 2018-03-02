@@ -1,8 +1,7 @@
+import os
 from qtgui.cli import run_gui
 
-# simulation_cfg = "/home/jaan/Projects/crowddynamics/crowddynamics/examples/collective_motion.py"
-simulation_cfg = "/home/jaan/Projects/crowddynamics-simulations/finlandia_talo.py"
-
-
 if __name__ == '__main__':
-    run_gui(simulation_cfg)
+    # Full (absolute) path to finlandia_talo.py file
+    root = os.path.dirname(__file__)
+    run_gui(os.path.join(root, "finlandia_talo.py"))
